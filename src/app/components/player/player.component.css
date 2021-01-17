@@ -1,0 +1,153 @@
+        .square,
+        .btn {
+            border-radius: 0px!important;
+        }
+        /* -- color classes -- */
+        
+        .coralbg {
+            background-image: url(C:\Users\david\OneDrive\Escritorio\Angular\BasketStats\src\assets\img\fondobanner.png);
+            background-repeat: repeat;
+            background-attachment: inherit;
+            background-position: 210px -90px;
+            /* background-position-x: right right; */
+            /* background-position-y: right right; */
+            background-size: cover;
+            /* -webkit-filter: blur(5px); */
+        }
+        
+        .blur {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(8px);
+            -webkit-filter: blur(5px);
+        }
+        
+        .filter {
+            filter: blur(50px);
+            -webkit-filter: blur(5px);
+        }
+        
+        .coral {
+            color: #070a86;
+        }
+        
+        .turqbg {
+            background-color: #46D8D2;
+        }
+        
+        .turq {
+            color: #46D8D2;
+        }
+        
+        .white {
+            color: #fff!important;
+        }
+        /* -- The btn stylings for the btn icons -- */
+        
+        .btn-label {
+            position: relative;
+            left: -12px;
+            display: inline-block;
+            padding: 6px 12px;
+            background: rgba(0, 0, 0, 0.15);
+            border-radius: 3px 0 0 3px;
+        }
+        
+        .btn-labeled {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        
+        .no-pad {
+            padding-right: 0;
+            padding-left: 0;
+            padding-bottom: 0;
+        }
+        
+        .title {
+            margin-left: 16px;
+            margin-top: 10px;
+            padding-right: 0;
+            padding-left: 10;
+            padding-bottom: 0;
+        }
+        
+        .padrow1 h3 {
+            font-size: 22px;
+        }
+        
+        .title h2 {
+            font-size: 35px;
+        }
+        
+        .title h3 {
+            font-size: 30px;
+        }
+        
+        .title h4 {
+            font-size: 25px;
+            margin-left: 60px;
+            /* align-content: center center; */
+        }
+        
+        .player-banner {
+            background: #eee;
+            /* min-height: 370px; */
+            /* height: 370px; */
+        }
+        
+        .player-pad {
+            /* padding: 12px 12px; */
+            min-height: 190px;
+        }
+        
+        .player-pad2 {
+            /* padding: 3px 3px; */
+            /* height: 100px; */
+        }
+        
+        .user-image {
+            overflow: hidden;
+            position: absolute;
+            width: 270px;
+            top: 0;
+            left: 5;
+            right: 10;
+            bottom: 0;
+            /* margin: auto; */
+        }
+        
+        .overview h3 {
+            font-weight: 300;
+            margin-top: 15px;
+            margin: 10px 0 0 0;
+        }
+        
+        .overview h4 {
+            font-weight: bold!important;
+            font-size: 45px;
+            margin-top: 0;
+        }
+        
+        .padpartidos {
+            font-size: 16px;
+            margin-top: 0;
+            padding: 3px 3px;
+            /* min-height: 71px; */
+            /* border-collapse: collapse; */
+        }
+        
+        .user-image2 {
+            margin-top: 12px;
+            margin-left: 30px;
+            height: 140px;
+            width: 140px;
+        }
+        
+        .escudo {
+            /* /* margin-top: 12px; */
+            margin-left: 0px;
+            height: 70px;
+            width: 180px;
+            filter: contrast(95%);
+            filter: brightness(160%);
+        }

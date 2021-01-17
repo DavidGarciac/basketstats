@@ -1,0 +1,73 @@
+<div>
+    <div>
+
+        {{FiltrosFormArray | json}} {{FiltroslabelsFormArray | json}}
+        <!-- <div class="row">
+
+            <div class="form-check" *ngFor="let check of filtroscheck">
+                <input class="form-check-input" [checked]="check.check == true" checked=check.check (change)="onChange(check.name,check.id, $event.target.checked)" name="{{ check.name }}" type="checkbox" id="{{check.name}}">
+                <label class="form-check-label" for="{{check.name}}">
+                    {{check.name}}
+                </label>
+            </div>
+
+        </div> -->
+        <div class="row">
+
+            <div class="col-2">
+                <div class="card">
+                    <article class="card-group-item">
+                        <header class="card-header">
+                            <h6 class="title">Filtros </h6>
+                        </header>
+                        <div class="filter-content">
+                            <div class="card-body">
+
+                                <div class="form-check" *ngFor="let check of filtroscheck">
+                                    <input class="form-check-input" [checked]="check.check == true" checked=check.check (change)="onChange(check.name,check.id, $event.target.checked)" name="{{ check.name }}" type="checkbox" id="{{check.name}}">
+                                    <label class="form-check-label" for="{{check.name}}">
+                                                {{check.name}}
+                                            </label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class=" border col-10">
+                <div class=" chart-container">
+                    <canvas baseChart [datasets]="barChartData" [colors]="BarrChartColors" [labels]="barChartLabels" [options]="barChartOptions" [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType"></canvas>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+        <!-- 
+        <div class="card">
+            <article class="card-group-item">
+                <header class="card-header">
+                    <h6 class="title">Filtros </h6>
+                </header>
+                <div class="filter-content">
+                    <div class="card-body">
+
+                        <div class="form-check" *ngFor="let check of filtroscheck">
+                            <input class="form-check-input" [checked]="check.check == true" checked=check.check (change)="onChange(check.name,check.id, $event.target.checked)" name="{{ check.name }}" type="checkbox" id="{{check.name}}">
+                            <label class="form-check-label" for="{{check.name}}">
+                                    {{check.name}}
+                                </label>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+
+        </div> -->
+
+        <!-- [colors]="colors" <button mat-button mat-raised-button  color="primary" (click)="randomize()">Update</button> -->
+    </div>
+</div>

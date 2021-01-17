@@ -1,0 +1,134 @@
+.coralbg {
+    background-color: rgb(0, 24, 69);
+}
+
+.badgcsss {
+    margin-left: 14em;
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgb(82, 190, 128);
+}
+
+.bannersearch {
+    background: #eee;
+}
+
+.user-image {
+    margin-top: 0px;
+    margin-left: 19px;
+    height: 120px;
+    width: 120px;
+}
+
+.inputcss {
+    margin-left: -20px;
+    margin-top: 40px;
+}
+
+.inputcss2 {
+    margin-top: 40px;
+    margin-left: 70px;
+}
+
+.img-thumbnail {
+    /* background-color: red; */
+    /* border-width: 10mm; */
+}
+
+.md-input {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.md-input .md-form-control {
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    border: none;
+    border-bottom: 2px solid rgb(10, 132, 255);
+    box-shadow: none;
+    width: 170px;
+    background-color: rgb(0, 24, 69);
+}
+
+.md-input label {
+    color: white;
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.md-input .bar:before {
+    left: 50%;
+}
+
+.md-input .bar:after {
+    right: 50%;
+}
+
+.md-input .highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.md-input .md-form-control:focus~label,
+.md-input .md-form-control:valid~label {
+    top: -15px;
+    font-size: 14px;
+    color: #e9e9e9;
+}
+
+.md-input .bar:before,
+.md-input .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 0px;
+    position: absolute;
+    background: #03A9F4;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.md-input .md-form-control:focus~.bar:before,
+.md-input .md-form-control:focus~.bar:after {
+    width: 50%;
+}
+
+input[type=text] {
+    /* background-color: #3CBC8D; */
+    color: white;
+}
+
+.menufilter {
+    min-width: 1230px;
+    width: 100%;
+}
+
+@media all and (max-width: 2000px) {
+    .menufilter {
+        min-width: 1630px;
+        max-width: 1900px;
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 1500px) {
+    .menufilter {
+        /* min-width: 1830px; */
+        max-width: 1200px;
+        width: 100%;
+    }
+}

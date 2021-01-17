@@ -1,0 +1,145 @@
+<div class="container">
+    <br>
+    <!-- BANNER PLAYER -->
+    <div class="container shadow p-3 mb-5 bg-white rounded border">
+        <div class="row ">
+            <div class="col-sm-12 player-banner border">
+                <div class="row coralbg white  player-pad ">
+                    <div class="col-md-2 no-pad ">
+                        <div class="user-image2 ">
+
+                            <div class="filter"></div>
+                            <img src="assets/img/mirotic.jpg" class="img-thumbnail rounded-circle" />
+                        </div>
+                    </div>
+
+                    <div class="col-md-6  title ">
+                        <div class="align-content-lg-start">
+                            <div class="row">
+                                <h2> #3&nbsp; </h2>
+                                <h3> | {{Juggador1.nombre }} <strong> {{Jugador.datos_jugador.apellido}}</strong>
+                                </h3>
+                            </div>
+                            <div class="row">
+                                <h4 class="white ">{{Jugador.datos_jugador.nombre_equipo}}</h4>
+                            </div>
+                            <div class="row escudo">
+                                <div>
+                                    <img src="assets/img/fondobanner.png" class="img-fluid rounded-circle border-darken-3" alt="Cinque Terre" />
+                                </div>
+
+                            </div>
+
+                            <div class="row"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 no-pad"></div>
+                    <div class="col-md-4 no-pad">
+                    </div>
+                </div>
+                <div class="row overview ">
+                    <div class="container ">
+                        <div class="row padrow1 ">
+                            <!-- PTS -->
+                            <div class="col-md-4 text-center pborder">
+                                <div [ngSwitch]="color">
+                                    <div *ngSwitchCase="'success'">
+                                        <h3>PTS</h3>
+                                        <h4><span class="badge badge-success">{{mediapts}}</span></h4>
+                                    </div>
+                                    <div *ngSwitchCase="'warning'">
+                                        <h3>PTS</h3>
+                                        <h4><span class="badge badge-warning">{{mediapts}}</span></h4>
+                                    </div>
+                                    <div *ngSwitchCase="'danger'">
+                                        <h3>PTS</h3>
+                                        <h4><span class="badge badge-danger">{{mediapts}}</span></h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- REB -->
+                            <div class="col-md-4  text-center border">
+                                <h3>REB</h3>
+                                <h4><span class="badge badge-warning">{{Jugador.acumuladas.dreb + Jugador.acumuladas.oreb }}</span> </h4>
+                            </div>
+                            <!-- AST -->
+                            <div class="col-md-4 text-center border">
+                                <h3>AST</h3>
+                                <h4><span class="badge badge-danger">{{Jugador.medias.ast | number : '1.2-2'}}</span></h4>
+                            </div>
+
+                        </div>
+
+                        <div class="row ">
+                            <div class="col-md-2 padpartidos text-center  border">
+                                <br>
+                                <span><p >PARTIDOS {{Jugador.avanzadas.partidos}}</p></span>
+
+                            </div>
+                            <div class="col-md-2 padpartidos text-center  border">
+                                <br>
+                                <span><p >MIN {{Jugador.avanzadas.minutos}}</p></span>
+
+                            </div>
+
+                            <div class="col-md-2 padpartidos text-center  border">
+                                <br>
+                                <span><p >POSICION {{Jugador.datos_jugador.posicion}}</p></span>
+
+                            </div>
+                            <div class="col-md-2 padpartidos text-center  border">
+                                <br>
+                                <span><p >NACIONALIDAD SLO</p></span>
+
+                            </div>
+                            <div class="col-md-2 padpartidos text-center  border">
+                                <br>
+                                <span><p>Nacido <small>30/02/1998</small></p></span>
+                            </div>
+                            <div class="col-md-2 padpartidos text-center border">
+                                <br>
+                                <span><p>Altura <small>2`03 mts</small></p></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col order-1">
+
+            </div>
+
+        </div>
+        <span>leyenda</span>
+    </div>
+    <!-- <div class="row m-3 border"> -->
+    <app-tablaplayer [sorttable]="sortparameter" [items]="Juggadores"></app-tablaplayer>
+    <!-- </div> -->
+    <!-- Tablas Content -->
+    <div class="card text-center">
+        <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+        </div>
+        <div class="card-body">
+
+            <!-- <app-radar [player]="player1"></app-radar> -->
+            <!-- <app-barras [player]="player1"></app-barras> -->
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    <footer></footer>
+</div>

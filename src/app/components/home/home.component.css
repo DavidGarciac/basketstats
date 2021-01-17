@@ -1,0 +1,95 @@
+/* $true-blue: rgba(4, 102, 200, 1);
+$usafa-blue: rgba(3, 83, 164, 1);
+$dark-cornflower-blue: rgba(2, 62, 125, 1);
+$oxford-blue: rgba(0, 40, 85, 1);
+$oxford-blue-2: rgba(0, 24, 69, 1);
+$oxford-blue-3: rgba(0, 18, 51, 1);
+$independence: rgba(51, 65, 92, 1);
+$black-coral: rgba(92, 103, 125, 1);
+$roman-silver: rgba(125, 133, 151, 1);
+$manatee: rgba(151, 157, 172, 1); */
+
+.headcss {
+    background-color: rgb(0, 24, 69);
+    color: white;
+    height: 50px;
+}
+
+.bodycardcss {
+    background-color: rgb(194, 210, 245);
+}
+
+.cardcss {
+    text-align: center
+}
+
+.cardcss:hover {
+    border-top: 1px solid #d0d0d0;
+    cursor: pointer;
+    border-width: 1px;
+    border-color: rgb(3, 83, 164);
+}
+
+.cardbodycss {
+    height: 100px;
+}
+
+
+/* .a {
+    display: inline-block;
+} */
+
+
+/* .cssinline {
+    display: inline-block;
+} */
+
+.bg-image-full {
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.logo-image {
+    margin-top: 12px;
+    margin-left: 30px;
+    height: 100px;
+    width: 100px;
+}
+
+a[ng-reflect-router-link] {
+    color: whitesmoke;
+    /* font-weight: 700; */
+}
+
+.carousel-control-next-icon {
+    height: 50px;
+    width: 50px;
+    margin-right: -200px;
+    outline: black;
+    background-size: 90%, 90%;
+    border-radius: 50%;
+    /* border: 1px solid rgb(0, 10, 36); */
+    background-image: none;
+}
+
+.carousel-control-prev-icon {
+    height: 50px;
+    width: 50px;
+    margin-left: -200px;
+    outline: black;
+    background-size: 90%, 90%;
+    border-radius: 50%;
+    /* border: 1px solid rgb(0, 10, 36); */
+    background-image: none;
+}
+
+.carousel-control-prev-icon {
+    background-image: url('https://apufpel.com.br/assets/img/seta_prim.png')
+}
+
+.carousel-control-next-icon {
+    background-image: url('https://apufpel.com.br/assets/img/seta_ult.png')
+}

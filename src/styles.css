@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/* PALETA DE COLORES */
+
+
+/* $true-blue: rgba(4, 102, 200, 1);
+$usafa-blue: rgba(3, 83, 164, 1);
+$dark-cornflower-blue: rgba(2, 62, 125, 1);
+$oxford-blue: rgba(0, 40, 85, 1);
+$oxford-blue-2: rgba(0, 24, 69, 1);
+$oxford-blue-3: rgba(0, 18, 51, 1);
+$independence: rgba(51, 65, 92, 1);
+$black-coral: rgba(92, 103, 125, 1);
+$roman-silver: rgba(125, 133, 151, 1);
+$manatee: rgba(151, 157, 172, 1); */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: whitesmoke;
+    /* color: white; */
+}
+
+
+/* Animaciones */
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fast {
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}

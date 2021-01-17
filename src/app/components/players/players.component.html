@@ -1,0 +1,11 @@
+<!-- <div style="text-align:center; content-align:center;" class="row m-auto border"> -->
+<app-tablatraditional [items]="Juggadores" [sorttable]="sortparameter"></app-tablatraditional>
+<!-- </div> -->
+
+
+<div class="text-center animated fadeIn">
+    <div class="col">
+        <br>
+        <app-loading *ngIf="loading"></app-loading>
+    </div>
+</div>

@@ -1,0 +1,168 @@
+.btndropmenu {
+    color: whitesmoke;
+    background-color: rgb(0, 24, 69);
+}
+
+table {
+    min-width: 1230px;
+    /* max-width: 1200px; */
+    width: 100%;
+}
+
+th {
+    font-size: 74%;
+}
+
+td {
+    font-size: small;
+    text-align: left;
+}
+
+.mat-cell {
+    color: rgb(0, 0, 0);
+}
+
+.mat-header-row {
+    background-color: rgb(0, 24, 69);
+    font-style: white;
+    height: 30px;
+    /* display: inline-block; */
+}
+
+.mat-row {
+    height: 50px;
+}
+
+.mat-header-row:hover {
+    box-shadow: inset 0 -20px 0 -16px rgb(4, 102, 200);
+}
+
+.highlight {
+    background: #42A948;
+    /* green */
+}
+
+.name_highlighter {
+    background-color: red;
+}
+
+.mat-row:nth-child(even) {
+    background-color: #eee;
+    font-style: black;
+}
+
+.mat-row:hover {
+    /* background-color: red; */
+    filter: brightness(90%);
+}
+
+.mat-row:nth-child(odd) {
+    background-color: rgb(224, 224, 224);
+}
+
+.mat-paginator {
+    background-color: rgb(0, 24, 69);
+    color: whitesmoke;
+    /* width: 1095px;
+    min-width: 1095px;
+    max-width: 1095px; */
+    height: 32px;
+    display: flex;
+    justify-content: flex-end;
+    /* vertical-align: top;  */
+    font-size: xx-small;
+}
+
+.team-image {
+    margin-top: -7px;
+    border-radius: 0.5px;
+    /* margin-left: 0px; */
+    height: 40px;
+    width: 40px;
+}
+
+.img-thumbnail {
+    box-shadow: none;
+}
+
+
+/* WIDTH DE LA ULTIMA COLUMNA */
+
+.mat-column-val {
+    flex: 9mm;
+    max-width: 9mm;
+    text-align: left;
+}
+
+
+/* WIDTH DE LA PRIMERA COLUMNA */
+
+.mat-column-index {
+    flex: 11mm;
+    max-width: 11mm;
+    text-align: left;
+}
+
+.mat-column-nombre_equipo {
+    flex: 35mm;
+    min-width: 35mm;
+    max-width: 35mm;
+    text-align: left;
+}
+
+
+/* WIDTH DE LA  COLUMNA FOTO */
+
+.mat-column-foto {
+    flex: 12mm;
+    max-width: 12mm;
+    min-width: 12mm;
+}
+
+
+/* WIDTH DE LA ftper COLUMNA */
+
+.mat-column-ftper {
+    flex: 10mm;
+    min-width: 10mm;
+    text-align: left;
+}
+
+
+/* WIDTH DE LA fgper COLUMNA */
+
+.mat-column-fgper {
+    flex: 10mm;
+    min-width: 10mm;
+    text-align: left;
+}
+
+
+/* WIDTH DE LA fg2per COLUMNA */
+
+.mat-column-fg2per {
+    flex: 10mm;
+    min-width: 10mm;
+    text-align: left;
+}
+
+
+/* WIDTH DE LA fg3per COLUMNA */
+
+.mat-column-fg3per {
+    flex: 10mm;
+    min-width: 10mm;
+    text-align: left;
+}
+
+.mat-column-pts {
+    flex: 9mm;
+    min-width: 9mm;
+    text-align: left;
+}
+
+.mat-column-fga {
+    flex: 8mm;
+    min-width: 8mm;
+    text-align: left;
+}

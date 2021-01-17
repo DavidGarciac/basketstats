@@ -1,0 +1,10 @@
+.chart-container {
+    position: relative;
+    margin: auto;
+    height: 30vh;
+    width: 28vw;
+}
+
+canvas {
+    /* border: 1px dotted red; */
+}

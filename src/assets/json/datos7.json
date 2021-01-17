@@ -1,0 +1,32 @@
+[
+    {
+       "player":"N. Mirotic",
+       "points":23,
+       "total_rebound":8.5,
+       "asis":1.5,
+       "steals":2,
+       "turnovers":2,
+       "blocks":1,
+       "minutes":27.7
+    },
+    {
+       "player":"R. Fernandez",
+       "points":16,
+       "total_rebound":4,
+       "asis":4,
+       "steals":2,
+       "turnovers":2,
+       "blocks":0,
+       "minutes":16.26
+    },
+    {
+       "player":"R. Fernandez",
+       "points":13,
+       "total_rebound":3.5,
+       "asis":2.5,
+       "steals":1,
+       "turnovers":1.5,
+       "blocks":0,
+       "minutes":25.625
+    }
+ ]

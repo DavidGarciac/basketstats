@@ -1,0 +1,399 @@
+<div class="container">
+    <br>
+    <!-- BANNER PLAYER -->
+    <div class="container shadow-sm p-3 mb-5 bg-white rounded">
+
+        <div class="row ">
+            <div class="container">
+                <div class="col-sm-12  ">
+                    <div class="row coralbg ">
+                        <div class="col-12">
+                            <br>
+                        </div>
+                    </div>
+                    <div class="row coralbg  justify-content-center   ">
+                        <div class="col-md-1 text-white  "> </div>
+
+                        <div class="col-md-2 text-white text-right ">
+                            <div class="row ">
+                                <div class="ml-auto">
+                                    <h2>
+                                        <h2> {{Juggador2.nombre}} <strong> </strong>
+                                            <h1> <i class="fas fa-tshirt" style="color: rgba(151, 157, 172)"></i> #3&nbsp; </h1>
+                                        </h2>
+                                    </h2>
+
+                                </div>
+                            </div>
+
+                            <p class="text-right">{{Juggador2.nombre_equipo}} - F</p>
+                        </div>
+                        <div class="col-md-2 text-white ">
+                            <div class="user-image ">
+                                <img [src]="Juggador2.foto | noimage" class="img-thumbnail rounded-bottom  " style="background-color:rgba(151, 157, 172); border-style:initial" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 text-white align-self-center  ">
+                            <h2 class="text-center"> COMPARADOR&nbsp; </h2>
+                            <h1 class="text-center"> VS&nbsp; </h1>
+
+                        </div>
+
+                        <div class="col-md-2 text-white ">
+                            <div class="user-image ">
+                                <img [src]="Juggador1.foto | noimage" class="img-thumbnail rounded-bottom" style="background-color:  rgba(3, 83, 164); border-style:initial" />
+                            </div>
+                        </div>
+                        <div class="col-md-2 text-white  ">
+
+                            <div class="row">
+                                <div class="">
+                                    <h2>
+                                        <h2> {{Juggador1.nombre}} <strong> </strong>
+                                            <h1> <i class="fas fa-tshirt" style="color: rgba(3, 83, 164)"></i> #3&nbsp; </h1>
+                                        </h2>
+                                    </h2>
+
+                                </div>
+                            </div>
+                            <p class=" ">{{Juggador1.nombre_equipo}} - F</p>
+                        </div>
+                        <div class="col-md-1 text-white ">
+                            <div class="box">
+
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="row coralbg text-white ">
+                        <div class="col-md-1 text-white  "> </div>
+                        <div class="col-md-1 text-white ">
+
+                        </div>
+
+                        <div class="col-md-3 text-white align-content-end ">
+                            <!-- AQIU -->
+                            <div class="container ">
+
+                                <div class=" inputcss2 ">
+                                    <form class="form-inline " [formGroup]="stateForm2">
+                                        <div class="md-input ">
+                                            <input #terminob class="md-form-control" required="" type="text" required [matAutocomplete]="autoGroup2">
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label>Jugador 1</label>
+                                            <mat-autocomplete #autoGroup2="matAutocomplete">
+                                                <mat-optgroup *ngFor="let group of stateGroupOptions2 | async" [label]="group.type">
+                                                    <mat-option (click)="playerb(terminob.value)" *ngFor="let name of group.names" [value]="name">
+                                                        {{name}}
+                                                    </mat-option>
+                                                </mat-optgroup>
+                                            </mat-autocomplete>
+
+                                        </div>
+
+                                    </form>
+                                </div>
+                                <!-- AUI -->
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 text-white  ">
+                            <div class="container border"></div>
+
+                        </div>
+                        <div class="col-md-3 text-white  align-content-end">
+                            <div class="container ">
+                                <div class=" inputcss ">
+                                    <form class="form-inline" [formGroup]="stateForm">
+                                        <div class="md-input ">
+                                            <input #terminoa class="md-form-control" required="" type="text" required [matAutocomplete]="autoGroup">
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label>Jugador 2</label>
+                                            <mat-autocomplete #autoGroup="matAutocomplete">
+                                                <mat-optgroup *ngFor="let group of stateGroupOptions | async" [label]="group.type">
+                                                    <mat-option (click)="playera(terminoa.value)" *ngFor="let name of group.names" [value]="name">
+                                                        {{name}}
+                                                    </mat-option>
+                                                </mat-optgroup>
+                                            </mat-autocomplete>
+
+                                        </div>
+
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-1 text-white  ">
+
+                        </div>
+                        <div class="col-md-1 text-white "> </div>
+                    </div>
+                    <div class="row coralbg ">
+                        <div class="col-12">
+                            <br>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-1"></div>
+
+
+            <div class="col-5">
+                <app-donutchart [datos1labels]="['Rebotes','Rebotes Totales','Rebotes Ofensivos', 'Rebotes Defensivos']" [datos1]="[Juggador1.treb,Juggador1.oreb, Juggador1.dreb]" [datos2]="[Juggador2.treb,Juggador2.oreb, Juggador2.dreb]" [nombre1]="Juggador1.nombre"
+                    [nombre2]="Juggador2.nombre"></app-donutchart>
+            </div>
+            <div class="col-5">
+                <app-donutchart [datos1labels]="['Tiros de Campo','%Tiros de campo','Tiros Intentados', 'Tiros Anotados']" [datos1]="[Juggador1.fgper,Juggador1.fga, Juggador1.fgm]" [datos2]="[Juggador2.fgper,Juggador2.fga, Juggador2.fgm]" [nombre1]="Juggador1.nombre"
+                    [nombre2]="Juggador2.nombre"></app-donutchart>
+            </div>
+            <div class="col-1"></div>
+            <!-- <div class="col-3"></div> -->
+        </div>
+
+        <div class="row">
+            <div class="col-1"></div>
+
+
+            <div class="col-5">
+                <app-donutchart [datos1labels]="['Tiros de 3','%Tiros de 3','Tiros de 3 Intentados', 'Tiros de 3 Anotados']" [datos1]="[Juggador1.fg3per,Juggador1.fga3, Juggador1.fgm3]" [datos2]="[Juggador2.fg3per,Juggador2.fga3, Juggador2.fgm3]" [nombre1]="Juggador1.nombre"
+                    [nombre2]="Juggador2.nombre"></app-donutchart>
+            </div>
+            <div class="col-5">
+                <app-donutchart [datos1labels]="['Tiros de 2','%Tiros de 2','Tiros de 2 Intentados', 'Tiros de 2 Anotados']" [datos1]="[Juggador1.fg2per,Juggador1.fga2, Juggador1.fgm2]" [datos2]="[Juggador2.fg2per,Juggador2.fga2, Juggador2.fgm2]" [nombre1]="Juggador1.nombre"
+                    [nombre2]="Juggador2.nombre"></app-donutchart>
+            </div>
+            <div class="col-1"></div>
+            <!-- <div class="col-3"></div> -->
+        </div>
+        <div class="row">
+            <div class="col-1"></div>
+
+
+            <div class="col-5">
+
+            </div>
+            <div class="col-5">
+                <h3 style=" margin-left: 90px;">
+                    <select [(ngModel)]="objValuedonut" (change)="selectdonut(objValuedonut)">
+                        <option *ngFor="let obj of objArray2"  [ngValue]="[obj.api1,obj.api2,obj.api3,obj.vista,obj.vista1, obj.vista2, obj.vista3] ">{{obj.vista}}</option>
+                    </select></h3>
+            </div>
+            <div class="col-1"></div>
+            <!-- <div class="col-3"></div> -->
+        </div>
+        <div class="row">
+            <div class="col-1"></div>
+
+
+            <div class="col-5">
+                <app-donutchart [datos1labels]="['Tiros Libres','%Tiros Libres','Tiros Libres Intentados', 'Tiros Libres Anotados']" [datos1]="[Juggador1.ftper,Juggador1.fta, Juggador1.ftm]" [datos2]="[Juggador2.ftper,Juggador2.fta, Juggador2.ftm]" [nombre1]="Juggador1.nombre"
+                    [nombre2]="Juggador2.nombre"></app-donutchart>
+            </div>
+            <div class="col-5">
+                <app-donutchart [datos1labels]="DatosLabelsDonut" [datos1]="datos1donut" [datos2]="datos2donut" [nombre1]="Juggador1.nombre" [nombre2]="Juggador2.nombre"></app-donutchart>
+            </div>
+            <div class="col-1"></div>
+            <!-- <div class="col-3"></div> -->
+        </div>
+        <div class="row  " style=" margin-left: -100px;">
+            <div class="col-3" style=" text-align:center;">
+                <h3 style=" margin-left: 90px;">PUNTOS</h3>
+            </div>
+            <div class="col-3 " style=" text-align: center">
+                <h3 style=" margin-left: 90px;">ASISTENCIAS</h3>
+            </div>
+            <div class="col-3 " style=" text-align: center">
+                <h3 style=" margin-left: 90px;">REBOTES</h3>
+            </div>
+            <div class="col-3 " style=" text-align: center">
+                <h3 style=" margin-left: 90px;">
+                    <select [(ngModel)]="objValue" (change)="selectpie(objValue)"> 
+                        <option value="" disabled="true">--Selecciona Parámetro--</option>
+                        <option *ngFor="let obj of objArray"  [ngValue]="obj.api">{{obj.vista}}</option>
+                    </select>
+                    <select>
+                        <option selected disabled hidden>Default Value</option>
+                        <option>Value 1</option>
+                        <option>Value 2</option>
+                        <option>Value 3</option>
+                        <option>Value 4</option>
+                    </select> </h3>
+            </div>
+
+        </div>
+        <div class="row" style=" margin-left: -100px;">
+            <div class="col-3 ">
+                <app-pie [data1]="Juggador1.pts" [nombre1]="Juggador1.nombre" [data2]="Juggador2.pts" [nombre2]="Juggador2.nombre"></app-pie>
+            </div>
+            <div class="col-3 ">
+                <app-pie [data1]="Juggador1.ast" [nombre1]="Juggador1.nombre" [data2]="Juggador2.ast" [nombre2]="Juggador2.nombre"></app-pie>
+
+            </div>
+            <div class="col-3 ">
+                <app-pie [data1]="Juggador1.treb" [nombre1]="Juggador1.nombre" [data2]="Juggador2.treb" [nombre2]="Juggador2.nombre"></app-pie>
+            </div>
+            <div class="col-3 ">
+                <app-pie [data1]="data1" [nombre1]="Juggador1.nombre" [data2]="data2" [nombre2]="Juggador2.nombre"></app-pie>
+            </div>
+
+        </div>
+        <br>
+        <br>
+
+        <div class="container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-1 "> </div>
+                    <div class="col-9">
+                        <div class="collapse" id="collapseExample">
+                            <div class="card card-body">
+                                <p><strong>PTO</strong><small>-Puntos   &nbsp;&nbsp;  </small>
+                                    <strong>ASI</strong><small>-Asistencias &nbsp;&nbsp; </small>
+                                    <strong>ROB</strong><small>-Robos  &nbsp;&nbsp;</small>
+                                    <strong>REB</strong><small>-Rebotes &nbsp;&nbsp; </small>
+                                    <strong>PER</strong><small>-Pérdidas &nbsp;&nbsp; </small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-2 ">
+                        <p>
+                            <button class="btn btn-secondary btn-sm" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="fas fa-book"></i>  Leyenda
+                </button>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1 border">
+                    One of three columns
+                </div>
+
+
+                <div class="col-2 border ">
+                    <div class="col ml-sm-3 ">
+
+                        <h4> Total :
+                        </h4>
+                    </div>
+
+
+                    <h1><span class="badge badge-success badgcsss">54</span></h1>
+                    <div class="col ">
+                        <select class="form-control form-control-sm  float-left" [(ngModel)]="opcionSeleccionado" (change)="capturar()">
+            <option>Puntos</option>
+            <option>Asistencias</option>
+            <option>Robos</option>
+            <option>Rebotes</option>
+            <option>Perdidas</option>
+          </select>
+                    </div>
+                </div>
+                <div class="col-8 border">
+
+                    <div [ngSwitch]="opcionSeleccionado">
+                        <div *ngSwitchCase="'Puntos'">
+                            <app-radar [player]="player1" [player2]="player2"></app-radar>
+                        </div>
+                        <div *ngSwitchCase="'Asistencias'">
+                            <app-radar [player]="player1" [player2]="player2"></app-radar>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <div class="col-1 border">
+                    One of three columns
+                </div>
+
+
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-1"></div>
+
+        <div class="col-10 border">
+            <!-- <app-barras [JugadorGris]="Juggador1" [JugadorAzul]="Juggador2"></app-barras> -->
+            <app-barras [nombre1]="Juggador1.nombre" [nombre2]="Juggador2.nombre" [datos1]="datos1barras" [datos2]="datos2barras"></app-barras>
+        </div>
+        <div class="col-1"></div>
+    </div>
+
+
+</div>
+
+<div class="container shadow-sm  bg-white rounded menufilter">
+    <div class="row ">
+        <div class="col-lg-12 order-lg-2">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a href="" data-target="#info" data-toggle="tab" class="nav-link active">Info</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" data-target="#recent" data-toggle="tab" class="nav-link">Recent Activity</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" data-target="#edit" data-toggle="tab" class="nav-link">Edit</a>
+                </li>
+            </ul>
+            <div class="tab-content py-4">
+                <div class="tab-pane active" id="info">
+                    <h5 class="mb-3"></h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>Email</h6>
+                            <h6>Name</h6>
+                        </div>
+                    </div>
+                    <!--/row-->
+                </div>
+                <div class="tab-pane" id="recent">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6>Eml</h6>
+                                <h6>Nme</h6>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tab-pane" id="edit">
+
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6>l</h6>
+                                <h6>e</h6>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
